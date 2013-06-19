@@ -1,0 +1,45 @@
+<?php
+
+$this -> headTitle('SOG Travel Demo');
+//$this->headScript()->headScript()->prependFile('/js/jquery.js');
+$this -> headLink() -> appendStylesheet('css/style.css');
+
+echo $this -> doctype();
+?>
+<html>
+	<head>
+		<?php echo $this->headTitle() ?>
+		<?php echo $this->headMeta() ?>
+		<?php echo $this->headLink() ?>
+		<?php echo $this->headScript() ?>
+	</head>
+	<body>
+		<div id="page">
+			<div id="sub_page">
+				<?=$this -> partial('page_modules/header.phtml'); ?>
+				<div id="banner">
+					<div id="banner_description">
+						<div id="banner_content">
+							Take your own photos
+							<br/>
+							ADVENTURE TIME
+						</div>
+						<div id="banner_button">
+							<a href="#" >Click Here</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<?=$this -> partial('page_modules/places_grid.phtml'); ?>
+				<div id="center">
+					<?=$this -> layout() -> content; ?>
+				</div>
+				<div class="clear"></div>
+				<div id="footer">
+					<?=$this -> partial('page_modules/footer.phtml'); ?>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
