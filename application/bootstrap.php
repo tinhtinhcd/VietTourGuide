@@ -8,4 +8,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
                                 'action'     => 'error'
         )));
     }
+    protected function _initDatabase(){
+        $db = $this->getPluginResource('db')->getDbAdapter();
+        Zend_Registry::set('db', $db);    
+    }
 }
